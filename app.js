@@ -87,6 +87,7 @@ console.log('Answer 7 = ' + answerSeven);
 for (var j = 0; j < favFood.length;) {
     if (answerSeven === favFood[j]){
         console.log('you got it right');
+        keepScore++;
         favFood.splice(j, 1);
         alert('you got it! I do like ' + favFood[j], 'I also like ' + favFood);
         break;
@@ -95,3 +96,6 @@ for (var j = 0; j < favFood.length;) {
         var answerSeven = prompt('Nope, take another guess?').toUpperCase();
     }
 }
+
+//displays the user score
+alert('Thank you for playing my guessing game ' + guestName + '! You scored ' + keepScore + ' out of 7 Questions.')
